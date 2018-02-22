@@ -6,8 +6,17 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Order {
-
-
+    private static int id = 0;
+    private int orderID;
+    
+    public Order() {
+        this.orderID = id++;
+    }
+    
+    public int getId(){
+        return orderID;
+    }
+    
     private Map<String, Integer> orderAmountsMap;
 
     public Map<String, Integer> getOrderAmountsMap() {
@@ -17,10 +26,7 @@ public class Order {
     public void setOrderAmountsMap(Map<String, Integer> orderAmountsMap) {
         this.orderAmountsMap = orderAmountsMap;
     }
-    private int tableNumber;
-
-    public Order() {
-    }    
+    private int tableNumber;   
     
     public Order(int tableNumber) {
         orderAmountsMap = new ConcurrentHashMap<>();

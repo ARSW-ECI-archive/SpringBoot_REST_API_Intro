@@ -1,0 +1,3 @@
+Se pueden generar datos corruptos ya que si se tiene varias sesiones en un mismo instantes
+y realizan algun cambio dentro de la información entonces pueden estar modificando cambios
+que no son correctos.
